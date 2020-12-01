@@ -21,3 +21,4 @@ class person:
 zs=person('张三',20,'男',2000)
 print(zs.name)
 zs.eat()
+zs.jump()
