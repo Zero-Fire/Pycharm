@@ -28,7 +28,7 @@ class EBicycle(bicycle):
 if __name__ == '__main__':
     with open ('bicycle_config.yml') as f:
         datas=yaml.safe_load(f)
-    print(datas['e1_level'])
+    print(datas['default'])
     battery_level=datas['default']['battery_level']
     run_km=datas['default']['run_km']
     eb = EBicycle(battery_level)# 是例子化
