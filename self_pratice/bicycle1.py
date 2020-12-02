@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import  yaml
 class bicycle:
     def run(self, km):
         print(f"健康环保骑行里程数为{km}km")
@@ -25,5 +26,12 @@ class EBicycle(bicycle):
 
 
 if __name__ == '__main__':
-    eb = EBicycle(10)
-    eb.run(103)
+    with open ('bicycle_config.yml') as f:
+        datas=yaml.safe_load(f)
+    print(datas['e1_level'])
+    battery_level=datas['default']['battery_level']
+    run_km=datas['default']['run_km']
+    eb = EBicycle(battery_level)# 是例子化
+    eb.run(run_km)
+    # eb = EBicycle(10)
+    # eb.run(103)

@@ -1,0 +1,37 @@
+#- 'a e f'
+#- 'b  x y'
+#- c
+#- d
+#- ~ #代表None
+#字典 嵌套列表  字典嵌套字典
+#languages:
+#  - Ruby
+#  - Perl
+#  - Python
+#websites:
+#  YAML: yaml.org
+#  Ruby: ruby-lang.org
+#  Python: python.org
+# 列表嵌套列表 列表嵌套字典
+ #[[1,2],[3,4],[5,6]]
+#- [1,2] #流式写法
+#- [3,4]
+#-
+#  - 5
+#  - 6
+#-
+#  key: 'value'
+#- &showell Steve
+#- Clark
+#- Oren
+#- *showell #打印显示steve
+dafaults: &defaults
+  adapter: postgres
+  host: localhost
+development:
+  database: myap_development
+  <<: *defaults
+test:
+  database: myapp_test
+  <<: *defaults
+
