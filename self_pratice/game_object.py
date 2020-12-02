@@ -23,6 +23,8 @@ class Game:
             if self.enemy_hp <= 0:
                 print("i win")
                 break
+    def back_home(self):
+        print('回城')
 
 class hoyi(Game):
     def __init__(self, defense, my_hp, enemy_hp):
@@ -35,3 +37,4 @@ class hoyi(Game):
 # game.fight()
 H = hoyi(200, 1000, 1500)
 H.fight()
+H.back_home()
