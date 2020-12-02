@@ -31,9 +31,14 @@ class funnyman(person):
     def fun(self):
         print(f'{self.name} is funny')
 
+    def skill_skill(self):
+        print(f"{self.name} is a actor,he`s age is {self.age},hes gender is {self.gen}")
+
 st = funnyman('haha','st',20,'男',2000)
 print(st.name)
-st.fun()
+st.skill_skill()
+zl = funnyman('haha','zl',20,'男',2000)
+zl.skill_skill()
 
 # zs=person('张三',20,'男',2000)
 # print(zs.name)
