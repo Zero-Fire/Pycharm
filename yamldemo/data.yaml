@@ -35,3 +35,4 @@ test:
   database: myapp_test
   <<: *defaults
 
+
