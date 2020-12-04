@@ -1,0 +1,14 @@
+data:
+  Cat:
+    name: Tom
+    age: 2
+    color: "黑色"
+    gender: male
+    hair: "短发"
+  Dog:
+    name: "旺财"
+    age: 3
+    color: "黄色"
+    gender: female
+    hair: "黄色"
+
