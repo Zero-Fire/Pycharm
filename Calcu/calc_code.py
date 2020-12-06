@@ -21,5 +21,4 @@ class Calculator:
         else:
             return a / b
 
-a=Calculator()
-print(a.add('\n',0.2))
+
