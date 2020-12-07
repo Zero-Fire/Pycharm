@@ -38,6 +38,8 @@ class TestCalculator:
     #     'a,b,expect', data,
     #     ids=key
     # )
+    @pytest.mark.run(order=1)
+    @pytest.mark.add
     def test_add(self,get_add_data,get_calc):
         #实例化计算器类
         # calc = Calculator()
@@ -53,6 +55,8 @@ class TestCalculator:
 
     # @pytest.mark.parametrize('a,b,expect',div,ids=keys)
     #
+    @pytest.mark.div
+    @pytest.mark.last
     def test_div(self,get_div_data,get_calc):
         # calc = Calculator()
         result = None
@@ -66,6 +70,8 @@ class TestCalculator:
     #
     # @pytest.mark.parametrize('a,b,expect',sub_data,ids=sub_key)
     #
+    @pytest.mark.sub
+    @pytest.mark.run(order=2)
     def test_sub(self,get_calc,get_sub_data):
         # calc = Calculator()
         result = None
@@ -78,6 +84,8 @@ class TestCalculator:
         assert result == get_sub_data[2]
     #
     # @pytest.mark.parametrize('a,b,expect',mul_data,ids=mul_key)
+    @pytest.mark.mul
+    @pytest.mark.run(order=3)
     def test_mul(self,get_calc,get_mul_data):
         # calc=Calculator()
         result = None
