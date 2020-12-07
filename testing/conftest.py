@@ -3,6 +3,7 @@ import yaml
 import pytest
 import os
 from Calcu.calc_code import Calculator
+from typing import List
 # @pytest.fixture(scope='session') #class module function 级别
 # def connectDB():
 #     print('链接数据库')
@@ -49,4 +50,13 @@ def get_mul_data(request):
     print("开始计算")
     yield data
     print("结束计算")
+def pytest_collection_modifyitems(
+    session: "Session", config: "Config", items: List["Item"]
+) -> None:
+    # 实现用例反转执行
+    # items.reverse()
+    for item in items:
+        item.name = item.name.encode('utf-8').decode('unicode-escape')
+        item._nodeid = item.nodeid.encode('utf-8').decode('unicode-escape')
+
 
