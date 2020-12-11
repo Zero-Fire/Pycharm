@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 #字典
-dict_a={"a":1,"b":2}
-dict_b=dict(a=1,b=2)
-b=dict_a.fromkeys((1,2,3),"a")
-print(b)
-print({i: i * 2 for i in range(1, 4)})
+# dict_a={"a":1,"b":2}
+# dict_b=dict(a=1,b=2)
+# b=dict_a.fromkeys((1,2,3),"a")
+# print(b)
+# print({i: i * 2 for i in range(1, 4)})
 # print(dict_a.keys())
 # print(dict_a.values())
 # print(dict_b.pop("a"))
@@ -57,3 +57,13 @@ print({i: i * 2 for i in range(1, 4)})
 # #= def fun3(x):
 #  #   return x*2
 # print(fun2(2,1))
+def mul (a,b):
+    try:
+        if isinstance(a,(int,float)) and isinstance(b,(int,float)):
+            return a*b
+        else:
+            return "请输入数字"
+    except Exception as e:
+        print(e)
+
+print(mul(1,','))
