@@ -3,7 +3,8 @@ from selenium import webdriver
 from time import  sleep
 class TestForm:
     def setup(self):
-        self.driver=webdriver.Firefox()
+        # self.driver=webdriver.Firefox()
+        self.driver = webdriver.Chrome()
         self.driver.maximize_window()
         self.driver.implicitly_wait(5)
     def teardown(self):
