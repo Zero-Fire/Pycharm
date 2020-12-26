@@ -1,6 +1,10 @@
 add:
-  - ["张三",zhangsan,zhangsan@qq.com]
-  - ["李四",lisi,lisi@qq.com]
+  datas:
+    - ["张三",zhangsan,zhangsan@qq.com]
+    - ["李四",lisi,lisi@qq.com]
+  keys:
+    - "添加张三"
+    - "添加李四"
 #  data:
 #    - ["张三"]
 #    - [1,2,3]

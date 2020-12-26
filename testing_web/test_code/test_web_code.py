@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 import time
-
 import pytest
 import yaml
 from selenium import webdriver
-with open("member_data_1.yaml", encoding="utf-8") as f:
-    data=yaml.safe_load(f)['add']
+with open("member_data.yaml", encoding="utf-8") as f:
+    datas=yaml.safe_load(f)['add']
+    data=datas['datas']
+    key = datas['keys']
     print(data)
-@pytest.mark.parametrize("name,id,mail",data)
+    print(key)
+@pytest.mark.parametrize("name,id,mail",data,ids=key)
 def test_web(name,id,mail):
     opt = webdriver.ChromeOptions()
     opt.debugger_address="127.0.0.1:9222"
