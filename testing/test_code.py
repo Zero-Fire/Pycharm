@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-import yaml
 import pytest
-from Calcu.calc_code import Calculator
 import allure
 
 
@@ -104,7 +102,7 @@ class TestCalculator:
                 result = get_calc.mul(get_mul_data[0],get_mul_data[1])
             if isinstance(result,float):
                 result = round(result,4)
-        except Exxeption as e:
+        except Exception as e:
             print(e)
         assert result == get_mul_data[2]
 

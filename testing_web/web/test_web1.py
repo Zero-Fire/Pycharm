@@ -13,7 +13,8 @@ class TestForm:
 #简单的自动登陆
     def test_form(self):
         self.driver.get("https://ceshiren.com/")
-        self.driver.find_element_by_xpath('/html/body/section/div/div[1]/header/div/div/div[2]/span/button[2]/span').click()
+        self.driver.find_element_by_xpath('/html/body/section/div/div[1]/'
+        'header/div/div/div[2]/span/button[2]/span').click()
         sleep(1.5)
         self.driver.find_element_by_id("login-account-name").send_keys("992106950@qq.com")
         sleep(1.5)

@@ -22,4 +22,5 @@ class Calculator:
         else:
             return a / b
 
-
+a=Calculator()
+print(a.mul('2','\\n'))
