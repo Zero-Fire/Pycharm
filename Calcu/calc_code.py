@@ -16,7 +16,7 @@ class Calculator:
             return "请输入数字"
     def div(self, a, b):
         if (type(a)!= int and type(a)!=float) or (type(b)!= int and type(b)!=float):
-            return "请输入数字"
+            return "输入无效，请输入数字"
         elif b == 0:
             return 'ZeroDivisionError'
         else:

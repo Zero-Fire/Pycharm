@@ -91,6 +91,7 @@ class TestCalculator:
         assert result == get_sub_data[2]
     #
     # @pytest.mark.parametrize('a,b,expect',mul_data,ids=mul_key)
+    @pytest.mark.skip
     @pytest.mark.mul
     @allure.story("测试乘法")
     @pytest.mark.run(order=3)
